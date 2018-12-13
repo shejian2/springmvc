@@ -30,8 +30,6 @@ public class UserController {
             userService.addUser(userModel);
             return true;
         }
-
-
         return false;
     }
 
