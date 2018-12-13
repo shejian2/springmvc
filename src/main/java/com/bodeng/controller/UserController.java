@@ -21,16 +21,16 @@ public class UserController {
 
     @RequestMapping("/addUser")
     @ResponseBody
-    public boolean addUser(@RequestParam(value = "username",required = false) String username,
+    public int addUser(@RequestParam(value = "username",required = false) String username,
                            @RequestParam(value = "age",required = false) int age){
         if(username!=null&&!username.equals("")){
             UserModel userModel=new UserModel();
             userModel.setUsername(username);
             userModel.setAge(age);
-            userService.addUser(userModel);
-            return true;
+             userService.addUser(userModel);
+             return userModel.getId();
         }
-        return false;
+        return -1;
     }
 
 

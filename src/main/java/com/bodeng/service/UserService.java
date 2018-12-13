@@ -8,7 +8,7 @@ public interface UserService {
 
     List<UserModel> getAllUsers();
     UserModel getUser(String id);
-    boolean addUser(UserModel userModel);
+    int addUser(UserModel userModel);
     boolean updateUser(String id,String username);
     boolean deleteUser(String id);
 }

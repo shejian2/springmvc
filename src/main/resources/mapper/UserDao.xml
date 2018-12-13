@@ -6,25 +6,15 @@
     <!-- 目的：为dao接口方法提供sql语句配置 -->
     <select id="getUser" resultType="UserModel" parameterType="String">
         <!-- 具体的sql -->
-
-        SELECT
-          *
-        FROM
-          user
-        WHERE
-        id = #{id}
+        SELECT * FROM user WHERE id = #{id}
     </select>
 
     <select id="getAllUsers" resultType="UserModel">
-		SELECT
-			*
-		FROM
-			user
+		SELECT * FROM user
 	</select>
     
-    <insert id="addUser">
-        insert into user (username,age)
-        values (#{username},#{age})
+    <insert id="addUser" useGeneratedKeys="true" keyProperty="id">
+        insert into user (username,age) values (#{username},#{age})
     </insert>
 
 </mapper>

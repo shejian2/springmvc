@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean addUser(UserModel userModel) {
+    public int addUser(UserModel userModel) {
         return userDao.addUser(userModel);
     }
 
