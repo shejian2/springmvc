@@ -1,4 +1,6 @@
 #
+#git rm -r --cached .idea
+
 .idea
 target/
 springmvc.iml
